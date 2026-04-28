@@ -13,3 +13,8 @@ def guardar_dado(rol, guard, ind):
     del rol[ind]
     saida = [rol, guard]
     return saida
+def remover_dado(rol, guard, ind):
+    rol.append(guard[ind])
+    del guard[ind]
+    resp = [rol, guard]
+    return resp
