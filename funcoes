@@ -46,3 +46,15 @@ def calcula_pontos_sequencia_baixa(lista):
     if '1234' in senha or '2345' in senha or '3456' in senha:
         saida = 15
     return saida
+def calcula_pontos_sequencia_alta(lista):
+    lista2 = []
+    for i in range(1,7):
+        if i in lista:
+            lista2.append(i)
+    senha = ''
+    for i in lista2:
+        senha += f'{i}'
+    saida = 0
+    if '12345' in senha or '23456' in senha:
+        saida = 30
+    return saida
