@@ -7,3 +7,9 @@ def rolar_dados(n):
         i += 1
         lista.append(x)
     return lista
+def guardar_dado(rol, guard, ind):
+    x = rol[ind]
+    guard.append(x)
+    del rol[ind]
+    saida = [rol, guard]
+    return saida
