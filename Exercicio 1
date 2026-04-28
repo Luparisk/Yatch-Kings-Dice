@@ -1,0 +1,9 @@
+def rolar_dados(n):
+    import random
+    lista = []
+    i = 0
+    while n> i:
+        x = random.randint(1,6)
+        i += 1
+        lista.append(x)
+    return lista
