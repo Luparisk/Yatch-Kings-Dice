@@ -18,3 +18,14 @@ def remover_dado(rol, guard, ind):
     del guard[ind]
     resp = [rol, guard]
     return resp
+def calcula_pontos_regra_simples(lista):
+    chave = {1: 0,
+             2: 0,
+             3: 0,
+             4: 0,
+             5: 0,
+             6: 0}
+    for i in lista:
+        if i in chave:
+            chave[i] +=i
+    return chave
