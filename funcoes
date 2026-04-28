@@ -29,3 +29,8 @@ def calcula_pontos_regra_simples(lista):
         if i in chave:
             chave[i] +=i
     return chave
+def calcula_pontos_soma(lista):
+    soma = 0
+    for i in lista:
+        soma +=i
+    return soma
