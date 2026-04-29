@@ -68,10 +68,16 @@ def calcula_pontos_full_house(lista):
         else:
             check[i] += 1
             sla.append(i)
+
     sortsla = sorted(sla)
+
+    soma = 0
+    for num in lista:
+        soma += num
+
     if sortsla[0] == sortsla[1] == sortsla[2] and sortsla[3] == sortsla[4]:
-        return sum(lista)
+        return soma
     elif sortsla[0] == sortsla[1] and sortsla[2] == sortsla[3] == sortsla[4]:
-        return sum(lista)
-    else:        
-        return 0    
+        return soma
+    else:
+        return 0
