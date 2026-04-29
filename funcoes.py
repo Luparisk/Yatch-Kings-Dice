@@ -59,22 +59,26 @@ def calcula_pontos_sequencia_alta(lista):
         saida = 30
     return saida
 def calcula_pontos_full_house(lista):
-    check = {}
-    
-    for i in lista:
-        if i not in check:
-            check[i] = 1
+    contagem = {}
+
+    # conta quantas vezes cada número aparece
+    for num in lista:
+        if num not in contagem:
+            contagem[num] = 1
         else:
-            check[i] += 1
+            contagem[num] += 1
+
+    # pega só as quantidades
+    valores = list(contagem.values())
+    valores.sort()
 
     # soma manual
     soma = 0
     for num in lista:
         soma += num
 
-    valores = list(check.values())
-
-    if len(valores) == 2 and (3 in valores and 2 in valores):
+    # verifica se é full house
+    if valores == [2, 3]:
         return soma
     else:
         return 0
