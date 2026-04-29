@@ -75,5 +75,3 @@ def calcula_pontos_full_house(lista):
         return sum(lista)
     else:        
         return 0    
-
-print(calcula_pontos_full_house([5, 5, 5, 5, 2]))
