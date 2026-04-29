@@ -81,4 +81,20 @@ def calcula_pontos_full_house(lista):
     if valores == [2, 3]:
         return soma
     else:
-        return 0
+        return 0 
+   def calcula_pontos_quadra (lista):
+        contagem = {}   
+        for num in lista:
+            if num not in contagem:
+                contagem[num] = 1
+            else:
+                contagem[num] += 1
+        valores = list(contagem.values())
+        valores.sort()  
+        soma = 0
+        for num in lista:
+            soma += num
+        if valores == [1, 4]:
+            return soma
+        else:
+            return 0
