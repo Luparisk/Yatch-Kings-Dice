@@ -58,3 +58,22 @@ def calcula_pontos_sequencia_alta(lista):
     if '12345' in senha or '23456' in senha:
         saida = 30
     return saida
+def calcula_pontos_full_house(lista):
+    sla = []
+    check = {}
+    for i in lista:
+        if i not in check:
+            check[i] = 1
+            sla.append(i)
+        else:
+            check[i] += 1
+            sla.append(i)
+    sortsla = sorted(sla)
+    if sortsla[0] == sortsla[1] == sortsla[2] and sortsla[3] == sortsla[4]:
+        return sum(lista)
+    elif sortsla[0] == sortsla[1] and sortsla[2] == sortsla[3] == sortsla[4]:
+        return sum(lista)
+    else:        
+        return 0    
+
+print(calcula_pontos_full_house([5, 5, 5, 5, 2]))
