@@ -99,3 +99,21 @@ def calcula_pontos_quadra(lista):
         return soma
     else:
         return 0
+
+def calcula_pontos_quina(lista):
+    contagem = {}
+
+    for num in lista:
+        if num not in contagem:
+            contagem[num] = 1
+        else:
+            contagem[num] += 1
+
+    soma = 0
+    for num in lista:
+        soma += num
+
+    if any(qtd >= 5 for qtd in contagem.values()):
+        return soma
+    else:
+        return 0
