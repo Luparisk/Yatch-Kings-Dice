@@ -95,7 +95,7 @@ def calcula_pontos_quadra(lista):
     for num in lista:
         soma += num
 
-    if 4 in contagem.values():
+    if any(qtd >= 4 for qtd in contagem.values()):
         return soma
     else:
         return 0
