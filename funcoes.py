@@ -109,11 +109,7 @@ def calcula_pontos_quina(lista):
         else:
             contagem[num] += 1
 
-    soma = 0
-    for num in lista:
-        soma += num
-
     if any(qtd >= 5 for qtd in contagem.values()):
-        return soma
+        return 50
     else:
         return 0
